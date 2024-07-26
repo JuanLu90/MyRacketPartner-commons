@@ -86,7 +86,8 @@ export function handleError(error) {
   throw error;
 }
 
-export const getTokenLocalStorage = () => localStorage.getItem("token");
+// export const getTokenLocalStorage = () => localStorage.getItem("token");
+export const getTokenLocalStorage = () => console.log("token");
 
 export const getRequestOptions = (method, body) => ({
   method: method,
