@@ -1,4 +1,4 @@
 // index.js
-import matchesService from "./services/matches.service";
+import matchesSlice from "./redux/slices/matchesSlice";
 
-export { matchesService };
+export { matchesSlice };
