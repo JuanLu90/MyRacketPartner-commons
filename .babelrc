@@ -1,9 +1,9 @@
 {
   "presets": [
     "@babel/preset-env",
-    "@babel/preset-react" // Incluye esto si usas React
+    "@babel/preset-react"  // Incluye esto si estás usando React
   ],
   "plugins": [
-    "@babel/plugin-transform-modules-commonjs"
+    "@babel/plugin-transform-modules-commonjs"  // Transforma módulos ES6 a CommonJS
   ]
 }
