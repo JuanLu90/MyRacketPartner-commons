@@ -11,7 +11,7 @@ async function matches() {
 
   return await fetch(`${API_URL}/matches`, requestOptions).then(
     handleResponse,
-    handleError,
+    handleError
   );
 }
 
@@ -20,7 +20,7 @@ async function matchDetails(matchId) {
 
   return await fetch(`${API_URL}/matchDetails/${matchId}`, requestOptions).then(
     handleResponse,
-    handleError,
+    handleError
   );
 }
 
@@ -29,7 +29,7 @@ async function matchDetailsHeadToHead(data) {
 
   return await fetch(
     `${API_URL}/matchDetails/headtohead/${data.player1Id}/${data.player2Id}`,
-    requestOptions,
+    requestOptions
   ).then(handleResponse, handleError);
 }
 
