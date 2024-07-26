@@ -1,2 +1,4 @@
-// src/index.js
-export * from "./src/services/matches.service";
+// index.js
+import matchesService from "./src/services/matches.service";
+
+export default matchesService;
