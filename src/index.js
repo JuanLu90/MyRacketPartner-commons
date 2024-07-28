@@ -1,1 +1,1 @@
-export * from "./resolvers";
+export { default as matchesResolvers } from "./resolvers/matches.resolvers";
