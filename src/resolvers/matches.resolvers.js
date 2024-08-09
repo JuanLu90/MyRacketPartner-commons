@@ -1,6 +1,7 @@
 const API_MATCHES_URL = "/matches";
 
 async function getMatches(data) {
+  console.log(data);
   const requestOptions = data.getRequestOptions("GET");
   return await fetch(
     `${data.apiurl + API_MATCHES_URL}/matches`,
