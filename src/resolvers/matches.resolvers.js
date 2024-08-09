@@ -1,9 +1,30 @@
-const apiUrl = "/matches";
+const API_MATCHES_URL = "/matches";
 
-const getMatches = () => `${apiUrl}/matches`;
-const getMatchDetails = (matchId) => `${apiUrl}/matchDetails/${matchId}`;
-const getMatchDetailsHeadToHead = (players) =>
-  `${apiUrl}/matchDetails/headtohead/${players.player1Id}/${players.player2Id}`;
+async function getMatches(data) {
+  const requestOptions = data.getRequestOptions("GET");
+  return await fetch(
+    `${data.apiurl + API_MATCHES_URL}/matches`,
+    requestOptions
+  ).then(data.handleResponse, data.handleError);
+}
+
+async function getMatchDetails(data) {
+  const requestOptions = data.getRequestOptions("GET");
+  return await fetch(
+    `${data.apiurl + API_MATCHES_URL}/matchDetails/${data.matchId}`,
+    requestOptions
+  ).then(handleResponse, handleError);
+}
+
+async function getMatchDetailsHeadToHead(data) {
+  const requestOptions = data.getRequestOptions("GET");
+  return await fetch(
+    `${data.apiurl + API_MATCHES_URL}/matchDetails/headtohead/${
+      data.players.player1Id
+    }/${data.players.player2Id}`,
+    requestOptions
+  ).then(data.handleResponse, data.handleError);
+}
 
 const matchesResolvers = {
   getMatches,
